@@ -11,6 +11,8 @@ app.get('/', (req, res) => {
     res.render('index')
 });
 
-app.listen(3001, () => {
-    console.log("Server start on port 3001");
+const port = process.env.PORT || 3001;
+
+app.listen(port, () => {
+    console.log(`Server started on port ${port}`);
 });
